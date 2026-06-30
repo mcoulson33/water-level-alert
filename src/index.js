@@ -11,6 +11,42 @@ export default {
       const generatedNumber = data[0].timeseries[7].latest_value; 
       const THRESHOLD = 50;
 
+      //Testing
+      const emailResponse1 = await fetch("https://mailchannels.net", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            personalizations: [
+              {
+                to: [{ email: "mcoulson33@gmail.com", name: "Me" }],
+              },
+            ],
+            from: {
+              email: "alerts@worker.local",
+              name: "Testing Bot",
+            },
+            subject: `Testing`,
+            content: [
+              {
+                type: "text/plain",
+                value: `Testing!`,
+              },
+            ],
+          }),
+        });
+
+      if (emailResponse1.ok) {
+          console.log("Alert email sent successfully.");
+        } else {
+          const errText = await emailResponse1.text();
+          console.error(`MailChannels failed to send: ${errText}`);
+        }
+      } else {
+        console.log(`Value is below threshold. No email sent.`);
+      }
+
       // 2. Check if the number is above your threshold
       if (generatedNumber > THRESHOLD) {
         console.log(`Value ${generatedNumber} is above threshold. Sending email via MailChannels...`);
