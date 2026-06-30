@@ -48,8 +48,7 @@ export default {
           body: JSON.stringify(emailData)
         });
     
-        return new Response(await response.text(), { status: response.status });
-      }
+        //return new Response(await response.text(), { status: response.status });
         /*
         const emailResponse = await fetch("https://mailchannels.net", {
           method: "POST",
