@@ -1,0 +1,331 @@
+[
+    {
+        "provider": "SWT",
+        "code": "HUDS",
+        "slug": "huds",
+        "elevation": 555,
+        "horizontal_datum": "NAD83",
+        "vertical_datum": "NGVD29",
+        "state": "OK",
+        "kind": "PROJECT",
+        "nearest_city": "Boatman, OK",
+        "public_name": "Lake Hudson",
+        "location_code": 2836051,
+        "nidid": "",
+        "aliases": {
+            "CWMS Standard Naming": "HUDS",
+            "NIDID": "OK00134",
+            "USGS Station Number": "07191400",
+            "NWS Handbook 5 ID": "MFDO2",
+            "DCP Platform ID": "CE606BD4",
+            "CWMS Legacy Naming": "HUDS"
+        },
+        "timeseries": [
+            {
+                "tsid": "HUDS.Stor.Inst.1Hour.0.Ccp-Rev",
+                "label": "Flood Storage",
+                "base_parameter": "Stor",
+                "parameter": "Stor",
+                "unit": "ac-ft",
+                "unit_long_name": "Acre-feet",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 311661.89,
+                "delta24hr": 14599,
+                "sort_order": 11
+            },
+            {
+                "tsid": "HUDS.Stor.Inst.1Hour.0.Ccp-Rev",
+                "label": "Conservation Storage",
+                "base_parameter": "Stor",
+                "parameter": "Stor",
+                "unit": "ac-ft",
+                "unit_long_name": "Acre-feet",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 311661.89,
+                "delta24hr": 14599,
+                "sort_order": 13
+            },
+            {
+                "tsid": "HUDS.Elev-Tailwater.Inst.1Hour.0.Ccp-Rev",
+                "label": "Elevation Tailwater",
+                "base_parameter": "Elev",
+                "parameter": "Elev-Tailwater",
+                "unit": "ft",
+                "unit_long_name": "Feet",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 574.5,
+                "delta24hr": 0.8,
+                "sort_order": 3
+            },
+            {
+                "tsid": "HUDS.Flow-Res In.Ave.~8Hours.8Hours.Rev-Ccp",
+                "label": "Inflow",
+                "base_parameter": "Flow",
+                "parameter": "Flow-Res In",
+                "unit": "cfs",
+                "unit_long_name": "Cubic feet per second",
+                "latest_time": "2026-06-29T21:00:00Z",
+                "latest_value": 43788.95,
+                "delta24hr": -285.88,
+                "sort_order": 6
+            },
+            {
+                "tsid": "HUDS.Precip-Inc.Total.1Hour.1Hour.Ccp-Rev",
+                "label": "Precipitation",
+                "base_parameter": "Precip",
+                "parameter": "Precip-Inc",
+                "unit": "in",
+                "unit_long_name": "Inches",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 0,
+                "delta24hr": 0,
+                "sort_order": 16
+            },
+            {
+                "tsid": "HUDS.Temp-Air.Inst.1Hour.0.Ccp-Rev",
+                "label": "Air Temperature",
+                "base_parameter": "Temp",
+                "parameter": "Temp-Air",
+                "unit": "F",
+                "unit_long_name": "Fahrenheit",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 85.71,
+                "delta24hr": -0.69,
+                "sort_order": 22
+            },
+            {
+                "tsid": "HUDS.Flow-Res Out.Inst.1Hour.0.Rev-Regi-Flowgroup",
+                "label": "Outflow",
+                "base_parameter": "Flow",
+                "parameter": "Flow-Res Out",
+                "unit": "cfs",
+                "unit_long_name": "Cubic feet per second",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 40071.9,
+                "delta24hr": 5511.9,
+                "sort_order": 7
+            },
+            {
+                "tsid": "HUDS.Elev.Inst.1Hour.0.Ccp-Rev",
+                "label": "Elevation",
+                "base_parameter": "Elev",
+                "parameter": "Elev",
+                "unit": "ft",
+                "unit_long_name": "Feet",
+                "latest_time": "2026-06-30T03:00:00Z",
+                "latest_value": 627.91,
+                "delta24hr": 1.04,
+                "sort_order": 1
+            }
+        ],
+        "levels": [
+            {
+                "slug": "elev.bottom of flood control",
+                "label": "Bottom of Flood Control",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Bottom of Flood Control",
+                "latest_value": 619,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.maximum pool",
+                "label": "Maximum Pool",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Maximum Pool",
+                "latest_value": 636,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.pool of record",
+                "label": "Pool of Record",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Pool of Record",
+                "latest_value": 636.06,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.spillway crest",
+                "label": "Spillway Crest",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Spillway Crest",
+                "latest_value": 599,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.streambed",
+                "label": "Streambed",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Streambed",
+                "latest_value": 555,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of conservation",
+                "label": "Top of Conservation",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Conservation",
+                "latest_value": 619,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of conservation taper 2026",
+                "label": "Top of Conservation TAPER 2026",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Conservation TAPER 2026",
+                "latest_value": 619,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of constant conservation",
+                "label": "Top of Constant Conservation",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Constant Conservation",
+                "latest_value": 619,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of dam",
+                "label": "Top of Dam",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Dam",
+                "latest_value": 645,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of flood",
+                "label": "Top of Flood",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Flood",
+                "latest_value": 636,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of inactive",
+                "label": "Top of Inactive",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Inactive",
+                "latest_value": 599,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of normal",
+                "label": "Top of Normal",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Normal",
+                "latest_value": 619,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "elev.top of power",
+                "label": "Top of Power",
+                "parameter": "Elev",
+                "base_parameter": "Elev",
+                "tsid": "HUDS.Elev.Inst.0.Top of Power",
+                "latest_value": 619,
+                "units": "ft",
+                "units_long_name": "Feet"
+            },
+            {
+                "slug": "stor.bottom of flood control",
+                "label": "Bottom of Flood Control",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Bottom of Flood Control",
+                "latest_value": 200190,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            },
+            {
+                "slug": "stor.top of conservation",
+                "label": "Top of Conservation",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Top of Conservation",
+                "latest_value": 200190,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            },
+            {
+                "slug": "stor.top of conservation taper 2026",
+                "label": "Top of Conservation TAPER 2026",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Top of Conservation TAPER 2026",
+                "latest_value": 200190,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            },
+            {
+                "slug": "stor.top of dam",
+                "label": "Top of Dam",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Top of Dam",
+                "latest_value": 642600,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            },
+            {
+                "slug": "stor.top of flood",
+                "label": "Top of Flood",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Top of Flood",
+                "latest_value": 444470,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            },
+            {
+                "slug": "stor.top of inactive",
+                "label": "Top of Inactive",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Top of Inactive",
+                "latest_value": 45579,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            },
+            {
+                "slug": "stor.top of normal",
+                "label": "Top of Normal",
+                "parameter": "Stor",
+                "base_parameter": "Stor",
+                "tsid": "HUDS.Stor.Inst.0.Top of Normal",
+                "latest_value": 200190,
+                "units": "ac-ft",
+                "units_long_name": "Acre-feet"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -95.18219,
+                36.23009
+            ]
+        }
+    }
+]
