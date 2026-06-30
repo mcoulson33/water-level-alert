@@ -25,7 +25,7 @@ export default {
           },
           body: JSON.stringify({
             from: 'Alerts <onboarding@resend.dev>',
-            to: 'env.PHONE_NUMBER', // Your number + carrier domain
+            to: 'env.EMAIL', // Your number + carrier domain
             subject: 'Test!',          // Keep subject short or empty
             text: 'Criteria met! The value dropped.' // Keep text under 160 characters
           })
