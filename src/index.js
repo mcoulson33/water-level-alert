@@ -17,7 +17,7 @@ export default {
         console.log(`Value ${generatedNumber} is above threshold. Sending email via MailChannels...`);
         
         // 3. Send email via MailChannels API
-        async fetch(request, env) {
+        await fetch(request, env) {
         const sendEmailURL = 'https://api.mailchannels.net/tx/v1/send';
     
         const emailData = {
