@@ -8,7 +8,7 @@ export default {
       }
       
       const data = await apiResponse.json();
-      const generatedNumber = data[0].timeseries[7].latest_value; 
+      const generatedNumber = data[0].timeseries[4].latest_value; 
       const THRESHOLD = 50;
 
       // 2. Check if the number is above your threshold
