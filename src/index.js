@@ -34,7 +34,7 @@ export default {
          return new Response("Notification dispatched successfully!", { status: 200 });
       
         } catch (error) {
-          return new Response(`Native Email Error: ${error.message}`, { status: 500 });
+          console.log(`Email Error: ${error.message}`, { status: 500 });
         }
       } else {
         console.log(`Value ${generatedNumber} is below threshold. No email sent.`);
