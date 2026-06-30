@@ -2,9 +2,9 @@
   "name": "water-level-alert",
   "main": "src/index.js",
   "compatibility_date": "2026-06-29",
-  // "triggers": {
-  //  "crons": ["* * * * *"] 
-  //}
+  "triggers": {
+    "crons": ["* 14 * * *"] 
+  },
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
