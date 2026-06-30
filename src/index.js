@@ -1,4 +1,3 @@
-import { Resend } from 'resend';
 export default {
   async scheduled(controller, env, ctx) {
     try {
