@@ -1,3 +1,4 @@
+import { Resend } from 'resend';
 export default {
   async scheduled(controller, env, ctx) {
     try {
@@ -13,30 +14,30 @@ export default {
 
       // 2. Check if the number is above your threshold
       if (generatedNumber > THRESHOLD) {
-        console.log(`Value ${generatedNumber} is above threshold. Sending email via MailChannels...`);
+        console.log(`Value ${generatedNumber} is above threshold.`);
         
         // 3. Send email
-        async fetch(request, env, ctx) {
-          try {
-            // Native Cloudflare email binding request
-            await env.SELVES_FORWARDER.send({
-              from: "alerts@yourdomain.com",
-              to: "mcoulson33@gmail.com", // Must match Step 1
-              subject: `Alert: Threshold Exceeded (${generatedNumber})`,
-              content: [
-                {
-                  type: "text/plain",
-                  value: `Alert! The generated number has reached ${generatedNumber}, which is above the threshold of ${THRESHOLD}.`,
-                }
-              ]
-            });
+        try {
+        fetch('https://resend.com', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'env.RESEND_API_KEY',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'Alerts <onboarding@resend.dev>',
+            to: 'mcoulson33@gmail.com', // Your number + carrier domain
+            subject: 'Test!',          // Keep subject short or empty
+            text: 'Criteria met! The value dropped.' // Keep text under 160 characters
+          })
+        });
       
-            return new Response("Notification dispatched successfully!", { status: 200 });
+         return new Response("Notification dispatched successfully!", { status: 200 });
       
-          } catch (error) {
-            return new Response(`Native Email Error: ${error.message}`, { status: 500 });
-          }
+        } catch (error) {
+          return new Response(`Native Email Error: ${error.message}`, { status: 500 });
         }
+      }
 
       } else {
         console.log(`Value ${generatedNumber} is below threshold. No email sent.`);
