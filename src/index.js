@@ -39,12 +39,10 @@ export default {
 
       if (emailResponse1.ok) {
           console.log("Alert email sent successfully.");
-        } else {
+      } else {
           const errText = await emailResponse1.text();
           console.error(`MailChannels failed to send: ${errText}`);
         }
-      } else {
-        console.log(`Value is below threshold. No email sent.`);
       }
 
       // 2. Check if the number is above your threshold
