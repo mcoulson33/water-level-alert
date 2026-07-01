@@ -20,7 +20,7 @@ export default {
         const response = await fetch('https://resend.com', {
           method: 'POST',
           headers: {
-            'Authorization': 'env.RESEND_API_KEY',
+            'Authorization': `Bearer ${env.RESEND_API_KEY}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
