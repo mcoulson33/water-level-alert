@@ -25,7 +25,7 @@ export default {
           },
           body: JSON.stringify({
             from: 'onboarding@resend.dev',
-            to: 'env.EMAIL', // Your number + carrier domain
+            to: 'env.EMAIL', // email
             subject: 'Alert!',          // Keep subject short or empty
             text: 'Criteria met! The elevation too high!' // Keep text under 160 characters
           })
@@ -34,7 +34,7 @@ export default {
         // 1. Check if the server returned a failure code (anything outside 200-299)
         if (!response.ok) {
           // 2. Parse the specific error message sent by Resend
-          const errorData = await response.json();
+          const errorData = await response.text();
           
           // 3. CRITICAL: Log this so it shows up in your cloud provider's console logs
           console.error('Resend API Failed:', {
