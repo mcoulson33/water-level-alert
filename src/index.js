@@ -34,14 +34,20 @@ export default {
         // 1. Check if the server returned a failure code (anything outside 200-299)
         if (!response.ok) {
           // 2. Parse the specific error message sent by Resend
-          const errorData = await response.text();
+          //const errorData = await response.json();
           
+          /*
           // 3. CRITICAL: Log this so it shows up in your cloud provider's console logs
           console.error('Resend API Failed:', {
             status: response.status,
             statusText: response.statusText,
             details: errorData
           });
+*/
+        // Read as text instead of .json() to catch the HTML string
+          const errorText = await response.text(); 
+          console.log("Actual Server Error Response:", errorText);
+          throw new Error(`Server dropped HTML: ${errorText}`)
 
           // 4. Return the specific error back to your frontend
           return {
@@ -51,12 +57,14 @@ export default {
         }
 
         // Success path
+        /*
           const successData = await response.json();
+          console.log(successData);
           return {
             statusCode: 200,
             body: JSON.stringify({ success: true, id: successData.id })
           };
-
+*/
         } catch (networkError) {
           // This ONLY triggers if the internet dropped or the Resend servers are completely down
           console.error('Fatal Network Error:', networkError);
