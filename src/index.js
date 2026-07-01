@@ -71,7 +71,7 @@ export default {
       }
       //Triggers if the cron job or api call failed? Not sure which.
     } catch (error) {
-      console.error("Error running daily job:", error);
+      console.error("Error running daily job:", error.message);
     }
   }
 };
